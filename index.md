@@ -1,1 +1,1 @@
-gh-pages Branch
+GH-pages
