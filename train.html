@@ -1,0 +1,35 @@
+<html>
+<body>
+
+<style>
+body {
+    background-color: #F3F4F7;
+    background-image: url('https://res.cloudinary.com/ryandee/T/bg.png');
+    background-repeat: no-repeat;
+} 
+div {font-family: Verdana; font-size: small; text-align: center; border: 2px solid #3847bf}
+.card {position: absolute; left: 246px; top: 285px}
+.overlay {position: absolute; left: 285px; top: 150px; background-color: white; visibility: hidden}
+</style>
+
+<img class="card" src="https://res.cloudinary.com/ryandee/T/train-card.png" onmouseover="play()" onmouseout="hide()">
+
+<script language="javascript">
+    function play() {
+        document.getElementById("clip").src = "https://res.cloudinary.com/ryandee/video/upload/h_400,ar_1,c_fit,e_preview:duration_8:max_seg_5:min_seg_dur_1/T/train.mp4";
+        document.getElementById("overlay").style.visibility = "visible"
+    }
+    function show() {
+        document.getElementById("overlay").style.visibility = "visible"
+    }
+    function hide() {
+        document.getElementById("overlay").style.visibility = "hidden"
+    }
+</script>
+    
+<div id="overlay" class="overlay" onmouseover="show()" onmouseout="hide()">
+    <video width="400" height="400" autoplay muted id="clip" src="" type="video/mp4"></video>
+    <br><a href="https://res.cloudinary.com/ryandee/video/upload/v1672257973/T/train.mp4" target="_blank">Full video</a>
+</div>
+
+</body></html>
